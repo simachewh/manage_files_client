@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 19, 2015, 10:08:39 PM
+    Author     : Simachew
+*/
+#refreshButton{
+    -fx-graphic: url(../images/Refresh.png);
+    -fx-content-display: graphic-only;
+}
+
+#playButton{
+    -fx-graphic: url(../images/playerin_blue.png);
+    -fx-content-display: graphic-only;
+}
+
+#nextButton{
+    -fx-graphic: url(../images/Last.png);
+    -fx-content-display: graphic-only;
+}
+
+#previousButton{
+    -fx-graphic: url(../images/resultset_first.png);
+    -fx-content-display: graphic-only;
+}

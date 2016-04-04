@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="root_gridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="managefilesclient.FXMLDocumentController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <BorderPane fx:id="root_borderPane" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@styles/style.css">
+          <left>
+              <VBox BorderPane.alignment="CENTER">
+                  <children>
+                      <GridPane>
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                          <children>
+                              <Label fx:id="listLabel" text="Available files" GridPane.halignment="LEFT" />
+                              <Button fx:id="refreshButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onMouseClicked="#onRefreshButtonClicked" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <tooltip>
+                              <Tooltip text="Refresh list" />
+                           </tooltip>
+                           <opaqueInsets>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </opaqueInsets>
+                        </Button>
+                          </children>
+                          <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                          </padding>
+                      </GridPane>
+                      <ListView fx:id="filesListView" onMouseClicked="#onListViewClicked" prefHeight="286.0" prefWidth="166.0" VBox.vgrow="ALWAYS" />
+                  </children>
+              </VBox>
+          </left>
+          <center>
+              <GridPane>
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                      <Pane fx:id="previewPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Pane>
+                      <HBox fx:id="controlsPane" alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1">
+                          <children>
+                              <Button fx:id="downloadButton" mnemonicParsing="false" onMouseClicked="#onDownloadButtonClicked" text="Download" />
+                              <Button fx:id="uploadButton" mnemonicParsing="false" onMouseClicked="#onUploadButtonClicked" text="Upload" />
+                        <Region prefHeight="25.0" prefWidth="160.0" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="previousButton" mnemonicParsing="false" onMouseClicked="#onPrevioustButtonClicked" text="Button" />
+                        <Button fx:id="nextButton" mnemonicParsing="false" onMouseClicked="#onNextButtonClicked" text="Button" />
+                          </children>
+                          <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                          </GridPane.margin>
+                      </HBox>
+                  </children>
+              </GridPane>
+          </center>
+      </BorderPane>
+   </children>
+</GridPane>
