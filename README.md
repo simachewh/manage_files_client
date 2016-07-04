@@ -1,4 +1,4 @@
-# Manage Files Cclient
+# Manage Files Client
 
 This is a desktop demo app that is built to consume the [Manage Files API](https://github.com/simachewh/manage_files_API).
 
